@@ -1,0 +1,56 @@
+<div id="drcal2"></div>
+<script type="text/javascript">
+  $(function () {
+    var cal = $.drcal();
+    cal.bind('drcal.monthRender', function () {
+      cal.find('td').each(function (_, td) {
+        $(td).append('<div><div class="daynum">'
+                   + $(td).attr('day')
+                   + '</div></div>');
+      });
+    }).changeMonth(new Date());
+    cal.delegate('td', 'click', function () {
+      cal.find('td').removeClass('selected');
+      $(this).addClass('selected');
+    });
+    // Twitter Bootstap removes default styling
+    cal.find('button').addClass('btn');
+    $('#drcal2').append(cal);
+  });
+</script>
+<style type="text/css">
+#drcal2 .calendar {border-collapse: collapse;}
+#drcal2 .calendar th {text-align: center;}
+#drcal2 .calendar td {
+  border: 1px solid #AEAEAE;
+  width: 6em;
+  height: 5em;
+}
+#drcal2 .calendar td > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+#drcal2 .calendar thead tr:first-child th {
+  font-size: large;
+  padding-bottom: 0.5em;
+}
+#drcal2 .calendar thead tr:last-child th {
+  font-weight: normal;
+  font-size: small;
+  color: #939393;
+}
+#drcal2 .calendar .prev {float: left;}
+#drcal2 .calendar .prev:before {content: "<";}
+#drcal2 .calendar .next {float: right;}
+#drcal2 .calendar .next:after {content: ">";}
+#drcal2 .calendar .today, .calendar .today.selected { background-color: #E9EFF8;}
+#drcal2 .calendar .selected {background-color: #F3F3F3;}
+#drcal2 .calendar .extra {color: #AEAEAE;}
+#drcal2 .calendar .daynum {
+  position: absolute;
+  top: 0.5ex;
+  right: 0.5ex;
+}
+</style>
