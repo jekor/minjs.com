@@ -87,7 +87,7 @@ syscmd(`pygmentize -f html longtable-example.html')
           <a class="btn small primary pull-right" href="https://github.com/jekor/drcal">Download from GitHub</a>
           <h1>drcal <small>A simple calendar framework</small></h1>
         </div>
-        <p>Can't find a calendar that looks and behaves just how you want? drcal provides a minimal "calendar framework" if you will that </p>
+        <p>Can't find a calendar that looks and behaves just how you want? drcal provides a minimal "calendar framework", if you will. It handles the date calculations and a few other basic tasks and leaves the behavior and styling up to you.</p>
         <div class="row">
           <h3>Minimal Example</h3>
           <div class="span-8">
