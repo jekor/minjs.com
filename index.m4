@@ -48,7 +48,7 @@
       </section>
 
       <!-- Examples need jQuery -->
-      <script src="/jquery-1.7.1.js"></script>
+      <script src="/jquery-1.7.1.min.js"></script>
 
       <section id="minform">
         <div class="page-header">

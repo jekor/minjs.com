@@ -4,7 +4,7 @@ sources := $(shell ls *.sass | grep -v lib.sass)
 examples := $(shell ls *-example.html)
 csses := $(sources:.sass=.css)
 
-all : index.html $(csses) minform.js longtable.js drcal.js
+all : index.html $(csses) minform.js longtable.js drcal.js jquery-1.7.1.min.js
 
 sync_options := -avz --exclude 'Makefile' --exclude 'index.m4' --exclude '*-example.html' --exclude 'twitter-bootstrap' --exclude '*.sass' --exclude '._*' --exclude '.DS_Store' --exclude '.sass-cache' --delete * linode:minjs.com/
 
@@ -22,6 +22,9 @@ longtable.js : /home/jekor/project/longtable/longtable.js
 
 drcal.js : /home/jekor/project/drcal/drcal.js
 	cp $^ $@
+
+jquery-1.7.1.min.js :
+	wget http://code.jquery.com/jquery-1.7.1.min.js
 
 sync :
 	rsync $(sync_options)
