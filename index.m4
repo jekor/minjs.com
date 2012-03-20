@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/bootstrap.css">
     <link rel="stylesheet" href="/minjs.css">
     <link rel="stylesheet" href="/pygments-colorful.css">
+    <title>minjs - Minimalist JavaScript</title>
   </head>
   <body>
     <div class="topbar">
