@@ -6,7 +6,7 @@ csses := $(sources:.sass=.css)
 
 all : index.html $(csses) minform.js longtable.js drcal.js jquery-1.7.1.min.js
 
-sync_options := -avz --exclude 'Makefile' --exclude 'index.m4' --exclude '*-example.html' --exclude 'twitter-bootstrap' --exclude '*.sass' --exclude '._*' --exclude '.DS_Store' --exclude '.sass-cache' --delete * linode:minjs.com/
+sync_options := -avz --exclude 'Makefile' --exclude 'index.m4' --exclude '*-example.html' --exclude 'twitter-bootstrap' --exclude '*.sass' --exclude '._*' --exclude '.DS_Store' --exclude '.sass-cache' --delete * minjs.com:minjs.com/
 
 index.html : index.m4 $(examples)
 	m4 $< > $@
