@@ -2,8 +2,8 @@
 <script type="text/javascript">
   $(function () {
     var cal = $.drcal();
-    cal.bind('drcal.monthRender', function () {
-      cal.find('td').each(function (_, td) {
+    cal.bind('drcal.weekRender', function (_, tr) {
+      $('td', tr).each(function (_, td) {
         $(td).append('<div><div class="daynum">'
                    + $(td).attr('day')
                    + '</div></div>');
