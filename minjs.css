@@ -1,0 +1,20 @@
+header {
+  background: url(header-pattern.png) repeat; /* http://www.colourlovers.com/pattern/1074/sucks_you_in */ }
+  header .container {
+    padding-top: 8em;
+    padding-bottom: 4em; }
+  header h1, header p {
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center; }
+  header h1 {
+    font-size: 36pt; }
+  header p {
+    font-size: 18pt; }
+
+section {
+  margin-top: 2em; }
+
+section#minform input {
+  display: block;
+  margin-top: 0.5em; }

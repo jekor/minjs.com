@@ -1,16 +1,9 @@
 <div id="drcal1"></div>
 <script type="text/javascript">
-  $(function () {
-    var cal = $.drcal();
-    cal.bind('drcal.weekRender', function (_, tr) {
-      $('td', tr).each(function (_, td) {
-        $(td).append('<div><div class="daynum">'
-                   + $(td).attr('day')
-                   + '</div></div>');
-      });
-    }).changeMonth(new Date());
-    $('#drcal1').append(cal);
+  var cal = drcal();
+  cal.addEventListener('drcal.renderDay', function (event) {
+    event.detail.element.appendChild(document.createTextNode(event.detail.date.getDate()));
   });
+  cal.changeMonth(new Date());
+  document.getElementById('drcal1').appendChild(cal);
 </script>
-<style type="text/css">
-</style>

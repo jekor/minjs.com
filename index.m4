@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/bootstrap.css">
-    <link rel="stylesheet" href="/minjs.css">
-    <link rel="stylesheet" href="/pygments-colorful.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="minjs.css">
+    <link rel="stylesheet" href="pygments.css">
     <title>minjs - Minimalist JavaScript</title>
   </head>
   <body>
@@ -38,24 +38,22 @@
           </div>
           <div class="span-one-third">
             <h3>Modular</h3>
-            <p>minjs is not a framework. It's a collection of independent components. Use only what you need.</p>
+            <p>minjs is not a framework. It's a collection of independent components. Use only what you need. Each component also doesn't depend on any frameworks or libraries: they're pure JS.</p>
           </div>
           <div class="span-one-third">
             <h3>Tested</h3>
-            <p>Each minjs component was created for <a href="http://www.vocabulink.com">Vocabulink</a> and arose from real needs.</p>
+            <p>Each minjs component was created for <a href="http://www.vocabulink.com">Vocabulink</a>. They've been running there (and other places) for years.</p>
           </div>
         </div>
       </section>
 
-      <!-- Examples need jQuery -->
-      <script src="/jquery-1.7.1.min.js"></script>
-
       <section id="minform">
         <div class="page-header">
           <a class="btn small primary pull-right" href="https://github.com/jekor/minform">Download from GitHub</a>
-          <h1>minform <small>HTML5 form enhancements with no extra JS</small></h1>
+          <h1>minform <small>HTML5 form enhancements</small></h1>
         </div>
         <p>minform allows you to use a few HTML5 form enhancements even if the browser doesn't support them.</p>
+        <script src="minform.js"></script>
         <div class="row">
           <div class="span-8">
 include(`minform-example.html')
@@ -69,13 +67,14 @@ syscmd(`pygmentize -f html minform-example.html')
       <section id="longtable">
         <div class="page-header">
           <a class="btn small primary pull-right" href="https://github.com/jekor/longtable">Download from GitHub</a>
-          <h1>longtable <small>Add features to tables with minimal fuss</small></h1>
+          <h1>longtable <small>Add paging to tables with minimal fuss</small></h1>
         </div>
         <p>longtable takes an existing HTML table and converts it into a paged table. No need to worry about AJAX, etc. Oh, and styling is up to you.</p>
+        <script src="longtable.js"></script>
         <div class="row">
           <div class="span-8">
 include(`longtable-example.html')
-            <p><a href="http://en.wikipedia.org/wiki/JavaScript#Versions">http://en.wikipedia.org/wiki/JavaScript#Versions</a> <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a></p>
+            <p><a href="http://en.wikipedia.org/wiki/JavaScript#Version_history">http://en.wikipedia.org/wiki/JavaScript#Version_history</a> <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a></p>
           </div>
           <div class="span-8">
 syscmd(`pygmentize -f html longtable-example.html')
@@ -86,9 +85,10 @@ syscmd(`pygmentize -f html longtable-example.html')
       <section id="drcal">
         <div class="page-header">
           <a class="btn small primary pull-right" href="https://github.com/jekor/drcal">Download from GitHub</a>
-          <h1>drcal <small>A simple calendar framework</small></h1>
+          <h1>drcal <small>A simple calendar builder</small></h1>
         </div>
-        <p>Can't find a calendar that looks and behaves just how you want? drcal provides a minimal "calendar framework", if you will. It handles the date calculations and a few other basic tasks and leaves the behavior and styling up to you.</p>
+        <p>Can't find a calendar that looks and behaves just how you want? drcal provides a minimal calendar builder. It handles the date calculations and a few other basic tasks and leaves the behavior and styling up to you.</p>
+        <script src="drcal.js"></script>
         <div class="row">
           <h3>Minimal Example</h3>
           <div class="span-8">
@@ -115,14 +115,9 @@ syscmd(`pygmentize -f html drcal-2-example.html')
       <div class="container">
         <p>Hi.</p>
         <p><a href="http://www.colourlovers.com/pattern/1074/sucks_you_in">Background image</a> by <a href="http://www.colourlovers.com/lover/technicolorrr">technicolorrr</a>.</p>
-        <p>Copyright 2012 <a href="http://jekor.com/">Chris Forno</a></p>
+        <p>Copyright 2012, 2015 <a href="http://jekor.com/">Chris Forno</a></p>
       </div>
     </footer>
-
-    <!-- minjs components below -->
-    <script src="/minform.js"></script>
-    <script src="/longtable.js"></script>
-    <script src="/drcal.js"></script>
 
 <!-- Google Analytics -->
 <script type="text/javascript">

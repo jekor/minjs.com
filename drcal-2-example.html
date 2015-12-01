@@ -1,22 +1,30 @@
 <div id="drcal2"></div>
 <script type="text/javascript">
-  $(function () {
-    var cal = $.drcal();
-    cal.bind('drcal.weekRender', function (_, tr) {
-      $('td', tr).each(function (_, td) {
-        $(td).append('<div><div class="daynum">'
-                   + $(td).attr('day')
-                   + '</div></div>');
-      });
-    }).changeMonth(new Date());
-    cal.delegate('td', 'click', function () {
-      cal.find('td').removeClass('selected');
-      $(this).addClass('selected');
-    });
-    // Twitter Bootstap removes default styling
-    cal.find('button').addClass('btn');
-    $('#drcal2').append(cal);
+  var cal = drcal();
+  cal.addEventListener('drcal.renderDay', function (event) {
+    var dayNum = document.createElement('div');
+    dayNum.className = 'daynum';
+    dayNum.appendChild(document.createTextNode(event.detail.date.getDate()));
+    var div = document.createElement('div');
+    div.appendChild(dayNum);
+    event.detail.element.appendChild(div);
   });
+  cal.changeMonth(new Date());
+  selected = null;
+  cal.addEventListener('click', function (event) {
+    if (event.target.tagName === 'DIV') {
+      event.preventDefault();
+      if (selected) selected.className = '';
+      selected = event.target;
+      selected.className = 'selected';
+    }
+  });
+  // Twitter Bootstap removes default styling
+  var buttons = cal.querySelectorAll('button');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].className += ' btn';
+  }
+  document.getElementById('drcal2').appendChild(cal);
 </script>
 <style type="text/css">
 #drcal2 .calendar {border-collapse: collapse;}
@@ -25,6 +33,7 @@
   border: 1px solid #AEAEAE;
   width: 6em;
   height: 5em;
+  padding: 0;
 }
 #drcal2 .calendar td > div {
   width: 100%;
