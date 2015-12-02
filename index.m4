@@ -24,7 +24,7 @@
     <header>
       <div class="container">
         <h1>Minimalist JavaScript</h1>
-        <p>Lightweight Widgets from Vocabulink</p>
+        <p>Lightweight Pure JavaScript Components</p>
       </div class="container">
     </header>
 
