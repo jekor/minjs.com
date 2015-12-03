@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="minjs.css">
-    <link rel="stylesheet" href="pygments.css">
     <title>minjs - Minimalist JavaScript</title>
   </head>
   <body>
@@ -27,6 +25,8 @@
         <p>Lightweight Pure JavaScript Components</p>
       </div class="container">
     </header>
+
+    <script src="minjs.min.js"></script>
 
     <div class="container">
 
@@ -59,7 +59,6 @@ syscmd(`gzip < $out/minform.min.js | wc -c')
           </div>
         </div>
         <p>minform allows you to use a few HTML5 form enhancements even if the browser doesn't support them.</p>
-        <script src="minform.js"></script>
         <div class="row">
           <div class="span-8">
 include(`minform-example.html')
@@ -82,7 +81,6 @@ syscmd(`gzip < $out/longtable.min.js | wc -c')
           </div>
         </div>
         <p>longtable takes an existing HTML table and converts it into a paged table. No need to worry about AJAX, etc. Oh, and styling is up to you.</p>
-        <script src="longtable.js"></script>
         <div class="row">
           <div class="span-8">
 include(`longtable-example.html')
@@ -106,7 +104,6 @@ syscmd(`gzip < $out/drcal.min.js | wc -c')
           </div>
         </div>
         <p>Can't find a calendar that looks and behaves just how you want? drcal provides a minimal calendar builder. It handles the date calculations and a few other basic tasks and leaves the behavior and styling up to you.</p>
-        <script src="drcal.js"></script>
         <div class="row">
           <h3>Minimal Example</h3>
           <div class="span-8">
