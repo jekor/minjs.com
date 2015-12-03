@@ -10,4 +10,5 @@ in
 let
   pkgs = if nixpkgs == null then _nixpkgs else import nixpkgs { };
 in
-  pkgs.callPackage ./default.nix { pygments = pkgs.pythonPackages.pygments; }
+  pkgs.callPackage ./default.nix { pygments = pkgs.pythonPackages.pygments;
+                                   uglify = pkgs.nodePackages.uglify-js; }

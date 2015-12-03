@@ -49,8 +49,14 @@
 
       <section id="minform">
         <div class="page-header">
-          <a class="btn small primary pull-right" href="https://github.com/jekor/minform">Download from GitHub</a>
           <h1>minform <small>HTML5 form enhancements</small></h1>
+          <div class="downloads">
+            <a class="btn primary" href="minform.min.js" download><span class="title">Download</span><br />
+syscmd(`gzip < $out/minform.min.js | wc -c')
+              bytes min+gz
+            </a>
+            <a class="btn" href="https://github.com/jekor/minform"><span class="title">Source</span><br /> on GitHub</a>
+          </div>
         </div>
         <p>minform allows you to use a few HTML5 form enhancements even if the browser doesn't support them.</p>
         <script src="minform.js"></script>
@@ -66,8 +72,14 @@ syscmd(`pygmentize -f html minform-example.html')
 
       <section id="longtable">
         <div class="page-header">
-          <a class="btn small primary pull-right" href="https://github.com/jekor/longtable">Download from GitHub</a>
           <h1>longtable <small>Add paging to tables with minimal fuss</small></h1>
+          <div class="downloads">
+            <a class="btn primary" href="longtable.min.js" download><span class="title">Download</span><br />
+syscmd(`gzip < $out/longtable.min.js | wc -c')
+              bytes min+gz
+            </a>
+            <a class="btn" href="https://github.com/jekor/longtable"><span class="title">Source</span><br /> on GitHub</a>
+          </div>
         </div>
         <p>longtable takes an existing HTML table and converts it into a paged table. No need to worry about AJAX, etc. Oh, and styling is up to you.</p>
         <script src="longtable.js"></script>
@@ -84,8 +96,14 @@ syscmd(`pygmentize -f html longtable-example.html')
 
       <section id="drcal">
         <div class="page-header">
-          <a class="btn small primary pull-right" href="https://github.com/jekor/drcal">Download from GitHub</a>
           <h1>drcal <small>A simple calendar builder</small></h1>
+          <div class="downloads">
+            <a class="btn primary" href="drcal.min.js" download><span class="title">Download</span><br />
+syscmd(`gzip < $out/drcal.min.js | wc -c')
+              bytes min+gz
+            </a>
+            <a class="btn" href="https://github.com/jekor/drcal"><span class="title">Source</span><br /> on GitHub</a>
+          </div>
         </div>
         <p>Can't find a calendar that looks and behaves just how you want? drcal provides a minimal calendar builder. It handles the date calculations and a few other basic tasks and leaves the behavior and styling up to you.</p>
         <script src="drcal.js"></script>
@@ -113,7 +131,7 @@ syscmd(`pygmentize -f html drcal-2-example.html')
 
     <footer>
       <div class="container">
-        <p>Hi.</p>
+        <p id="filesize">Filesizes are calculated by first minifying the source with <code>uglifyjs --mangle --screw-ie8</code> and then gzipping. This is the amount of data you can expect to transmit from server to browser when using the minified version.</p>
         <p><a href="http://www.colourlovers.com/pattern/1074/sucks_you_in">Background image</a> by <a href="http://www.colourlovers.com/lover/technicolorrr">technicolorrr</a>.</p>
         <p>Copyright 2012, 2015 <a href="http://jekor.com/">Chris Forno</a></p>
       </div>

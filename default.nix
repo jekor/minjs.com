@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, bash, coreutils, findutils, gnugrep, m4, pygments }:
+{ stdenv, fetchurl, bash, coreutils, findutils, gnugrep, m4, pygments, uglify }:
 
 stdenv.mkDerivation {
   name = "minjs.com";
@@ -20,6 +20,6 @@ stdenv.mkDerivation {
     sha256 = "18ymn5k5kdxk4mvarqy1s8dqb1czr3132gm9lp92m27rxfkxmcyc";
   };
   builder = ./builder.sh;
-  buildInputs = [ bash m4 pygments ];
+  buildInputs = [ bash m4 pygments uglify ];
   inherit bash coreutils findutils gnugrep m4 pygments;
 }
